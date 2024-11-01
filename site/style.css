@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, #33292A, #8c7275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem; /* Aumentei para melhor legibilidade */
+    color: #D6D58E;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #D6D58E;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+section {
+    background-color: rgba(12, 10, 10, 0.7);
+    width: 90vw; /* Usei 90vw para maior responsividade */
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center; /* Centraliza o texto na seção */
+}
+
+div {
+    font-weight: 300;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px; /* Adicionei espaçamento */
+}
+
+button {
+    background-color: #D6D58E;
+    color: #33292A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para melhor controle de layout */
+}
+
+button:hover {
+    color: #D6D58E;
+    background-color: #33292A;
+    border: 1px solid white;
+
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; 
+    }
+
+    p {
+        font-size: 1rem; 
+    }
+
+    section {
+        padding: 15px; 
+    }
+
+    div {
+        font-size: 1.5rem; 
+    }
+
+    button {
+        padding: 8px 15px; 
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    section {
+        width: 95vw; 
+    }
+}

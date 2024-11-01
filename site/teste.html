@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimativa de Armazenamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Cheque o armazenamento do seu navegador</h1>
+    </header>
+    
+        
+        <section>
+            <div class="utilidade">
+            <p>Check Storage</p>
+            <button id="check-storage">Check Storage</button>
+            </div>
+        </section>
+    
+
+    <script>
+        
+        async function checkStorage() {
+            try {
+                const { usage, quota } = await navigator.storage.estimate();
+                window.alert(`Armazenamento usado: ${usage} bytes`);
+                window.alert(`Armazenamento alvo: ${quota} bytes`);
+                const availableSpace = (quota - usage);
+                window.alert(`Armazenamento livre: ${availableSpace} bytes`);
+            } catch (error) {
+                window.alert('Error retrieving storage information:', error);
+            }
+        }
+
+        
+        document.getElementById('check-storage').addEventListener('click', checkStorage);
+    </script>
+</body>
+</html>
